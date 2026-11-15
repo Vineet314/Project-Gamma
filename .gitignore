@@ -2,3 +2,4 @@
 *.csv
 !single_agent/sales.csv
 *.env
+__pycache__/
