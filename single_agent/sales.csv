@@ -1,0 +1,9 @@
+customer,product,quantity,price,region
+Alice,Laptop,2,75000,North
+Bob,Phone,3,25000,South
+Charlie,Laptop,1,75000,East
+David,Tablet,4,30000,West
+Eva,Phone,2,25000,North
+Frank,Laptop,3,75000,South
+Grace,Tablet,2,30000,East
+Henry,Phone,5,25000,West

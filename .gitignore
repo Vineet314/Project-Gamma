@@ -1,0 +1,4 @@
+.venv/
+*.csv
+!single_agent/sales.csv
+*.env
