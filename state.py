@@ -16,6 +16,7 @@ class StockAnalysisState(TypedDict):
 
     # Supervisor
     analysis_type: str
+    next_agents : list[str]
 
     # Agent outputs
     financial_analysis: AgentResult
