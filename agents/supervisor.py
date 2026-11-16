@@ -6,7 +6,7 @@ def supervisor(state: dict[str, Any]) -> dict[str, Any]:
     """
     Rule-based supervisor.
     Determines which agents should execute.
-    Later, it will be 
+    Later, it will be an LLM based agent.
     """
 
     analysis_type = state["analysis_type"]
