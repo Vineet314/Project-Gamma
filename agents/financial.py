@@ -1,12 +1,12 @@
 from typing import Any
 import random
 
-def financial(state: dict[str, Any]) -> dict[str, Any]:
+def financial_agent(state: dict[str, Any]) -> dict[str, Any]:
     """
     A mock agent that does financial analysis of a given stock.
     """
 
-    assert state["analysis_type"] == "fundamental", 'Financial agent can only do fundamental analysis'
+    assert state["analysis_type"] in ["fundamental", "full"], 'Financial agent can only do fundamental analysis'
     
     ticker = state["stock_symbol"]
 
@@ -22,5 +22,5 @@ def financial(state: dict[str, Any]) -> dict[str, Any]:
     return {'financial_analysis':{
         "status": "completed",
         "data": {i:j for i,j in zip(keys,values)},
-        "errors":None,
-        "attempts":0}} # state update: give list of next agent/s to call
+        "error":None,
+        "attempts":1}} # state update: give list of next agent/s to call

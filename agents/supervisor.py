@@ -1,8 +1,7 @@
-
 from typing import Any
 
 
-def supervisor(state: dict[str, Any]) -> dict[str, Any]:
+def supervisor_agent(state: dict[str, Any]) -> dict[str, Any]:
     """
     Rule-based supervisor.
     Determines which agents should execute.
