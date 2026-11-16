@@ -11,8 +11,8 @@ def technical_agent(state: dict[str, Any]) -> dict[str, Any]:
     ticker = state["stock_symbol"]
 
     O = random.randint(100,5000)
-    H = O*(1 + random.uniform(0,19.9))
-    L = O*(1 - random.uniform(0,19.9))
+    H = O*(1 + random.uniform(0,0.199))
+    L = O*(1 - random.uniform(0,0.199))
     C = random.uniform(L,H)
     OHLC = [O,H,L,C]
     RSI = random.uniform(10,90)
