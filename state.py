@@ -1,4 +1,11 @@
-from typing import TypedDict
+from typing import TypedDict, Optional, Any
+
+
+class AgentResult(TypedDict):
+    status: str
+    data: Optional[dict[str, Any]]
+    error: Optional[str]
+    attempts: int
 
 
 class StockAnalysisState(TypedDict):
@@ -11,8 +18,8 @@ class StockAnalysisState(TypedDict):
     analysis_type: str
 
     # Agent outputs
-    financial_analysis: dict
-    technical_analysis: dict
+    financial_analysis: AgentResult
+    technical_analysis: AgentResult
 
     # Final output
     final_report: str
