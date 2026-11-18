@@ -1,7 +1,7 @@
 from typing import Any
+from graph import StockAnalysisState
 
-
-def supervisor_agent(state: dict[str, Any]) -> dict[str, Any]:
+def supervisor_agent(state: StockAnalysisState) -> dict[str, Any]:
     """
     Rule-based supervisor.
     Determines which agents should execute.

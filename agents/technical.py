@@ -1,7 +1,8 @@
+from graph import StockAnalysisState
 from typing import Any
 import random
 
-def technical_agent(state: dict[str, Any]) -> dict[str, Any]:
+def technical_agent(state: StockAnalysisState) -> dict[str, Any]:
     """
     A mock agent that does technical analysis of a given stock.
     """
@@ -28,4 +29,4 @@ def technical_agent(state: dict[str, Any]) -> dict[str, Any]:
         "status": "completed",
         "data": {i:j for i,j in zip(keys,values)},
         "error":None,
-        "attempts":1}} # state update: give list of next agent/s to call
+        "attempts":1}} 
