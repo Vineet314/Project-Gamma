@@ -40,8 +40,10 @@ def main():
         ticker = input('SYMBOL: ').upper().strip()
         
     state = build_initial_state(user_query=user_query, stock_symbol=ticker)
-    result = graph.invoke(state, config=config)
-    print(result)
+    print("\n--- STREAMING UPDATES ---")                                                                                                                                                          
+    for event in graph.stream(state, config=config, stream_mode="values"):                                                                                                                       
+        print(event)                                                                                                                                                                              
+        print("-" * 20)
 
 if __name__=='__main__':
     main()
